@@ -12,19 +12,58 @@ export default {
       store,
     }
   },
+  methods: {
+    getMovies_and_series() {
+      let myURL_movies = store.apiURL_movies
+      let myURL_series = store.apiURL_series
+      if(store.searchText !== ""){
+      myURL_movies = myURL_movies + `${store.searchText}`
+      myURL_series = store.apiURL_series + `${store.searchText}`
+      }
+      axios.get(myURL_movies)
+      .then
+        ( (datoindietro) => {
+        
+        const resultArray = datoindietro.data.results
+        console.log(datoindietro.data.results);
+        store.filmArray = resultArray
+      })
+      .catch(err =>{
+        console.log(err)
+      });
+      axios.get(myURL_series)
+      .then
+        ( (datoindietro) => {
+        
+        const resultArray = datoindietro.data.results
+        console.log(datoindietro.data.results);
+        store.seriesArray = resultArray
+      })
+      .catch(err =>{
+        console.log(err)
+      });
+    },
 
-}
+  },
+  created(){
+
+  },
+  }
+
 </script>
 
 <template>
 
   <header>
-
+    <div class="container">
+      <h1>BOOLFLIX</h1>
+      <AppSearch @mySelection="getMovies_and_series"/>
+    </div>
     
   </header>
 
   <main>
-    <ListProducts />
+    <ListProducts/>
   </main>
 
 </template>
