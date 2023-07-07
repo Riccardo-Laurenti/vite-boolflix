@@ -19,12 +19,17 @@ export default {
 <template>
 
   <header>
+
     
+  </header>
+
+  <main>
+    <ListProducts />
+  </main>
 
 </template>
 
 <style lang="scss">
-
 @use './styles/partials/variables.scss' as *;
 @use './styles/generals.scss' as *;
 
