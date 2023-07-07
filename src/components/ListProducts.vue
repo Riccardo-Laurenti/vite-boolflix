@@ -64,8 +64,12 @@ export default {
     height: 100%;
 }
 hr {
-  color: white;
+    color: white;
+    width: 80px;
+    text-align: center;
+    margin: auto;
 }
+
 h1 {
   text-align: center;
 }

@@ -109,6 +109,9 @@ export default {
         height: 100%;}
     }
    
+    div {
+        cursor: pointer;
+    }
     
 }
 </style>
