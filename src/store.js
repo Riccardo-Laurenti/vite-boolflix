@@ -13,6 +13,6 @@ export const store= reactive({
 
     searchText:"",
 
-    lingueDiCuiHoBandiere: ["it", "en", "ja","es","fr","cn"]
+    linguabandiera: ["it", "en", "ja","es","fr","cn"]
 
 });

@@ -18,8 +18,6 @@ export default {
 
 
 <template>
-    
-
     <div class="prod-card" bg-img>
         <div class="immagine-poster">
             <img :src="'https://image.tmdb.org/t/p/w342' + details.poster_path" alt="immagine poster">
@@ -39,7 +37,7 @@ export default {
 
             <span><strong>Lingua originale: </strong></span>
             <img class="bandiera"
-            :src="store.lingueDiCuiHoBandiere.includes(details.original_language) ? '/' + details.original_language + '.png' : details.original_language" :alt="store.lingueDiCuiHoBandiere.includes(details.original_language) ? '/' + details.original_language + '.png' : details.original_language">
+            :src="store.linguabandiera.includes(details.original_language) ? '/' + details.original_language + '.png' : details.original_language" :alt="store.linguabandiera.includes(details.original_language) ? '/' + details.original_language + '.png' : details.original_language">
 
             <div class="overview-card"><strong>Overview: </strong>{{ details.overview}}</div>
 
