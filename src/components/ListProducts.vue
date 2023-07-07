@@ -19,16 +19,13 @@ export default {
 }
 </script>
 
-<!-- HTML -->
 <template>
   <div class="container">
     <section class="products">
 
-      <h1>--FILM--</h1>
+      <h1>Film</h1>
       <hr>
-      <div class="boxes">
-        <!-- SEZIONE DEI FILM -->
-        
+      <div class="boxes">        
         <ProductCard 
         v-for="(film,index) in store.filmArray"
         :key='index'
@@ -37,10 +34,9 @@ export default {
         />
       </div>
 
-      <h1>--SERIE TV--</h1>
+      <h1>Serie Tv</h1>
       <hr>
       <div class="boxes">
-        <!-- SEZIONE DELLE SERIE TV -->
         <ProductCard 
         v-for="(serie,index) in store.seriesArray"
         :key='index'
@@ -56,7 +52,7 @@ export default {
 
 </template>
 
-<!-- STILE -->
+
 
 <style scoped lang="scss">
 .boxes {

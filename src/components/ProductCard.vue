@@ -4,7 +4,7 @@ export default {
     name: "ProductCard",
     props: {
     details: Object,
-    // dettagli: Object,
+
   },
   data() {
      return {
@@ -12,47 +12,30 @@ export default {
             
      }
   },
-//   methods: {
-//     transformVotesInStars(numero) {
-//         "<i class='fa-solid fa-star'></i>" * numero
-//     }
-//   }
+
 }
 </script>
 
-<!-- HTML -->
+
 <template>
     
-    <!-- blocco prodotto -->
+
     <div class="prod-card" bg-img>
         <div class="immagine-poster">
             <img :src="'https://image.tmdb.org/t/p/w342' + details.poster_path" alt="immagine poster">
         </div>
 
-        <!-- PARTE CHE SI VEDE SULL HOVER -->
+
         <div class="card-details">
-            
-
-        
-            <!-- <div class="img-card">
-                <img :src="'https://image.tmdb.org/t/p/w342' + details.backdrop_path" alt="immagine film">
-            </div> -->
-
-            
-            
             <div class="titolo-card">{{ details.title ? details.title : details.name }}</div>  
-            <!-- .name per SERIE  -->
 
             <div class="titoloOriginale-card"><strong>Titolo originale: </strong>{{ details.original_title ? details.original_title : details.original_name }}</div>
-            <!-- .original_name per SERIE  -->
+
 
             <div class="voto-card"><strong>Voto: </strong>
                 <i v-for="star in Math.round(details.vote_average / 2)" class='fa-solid fa-star'></i>
             </div>
-            <!-- .vote_average per SERIE  -->
 
-            <!-- <div class="lingua-card">Lingua originale: {{ store.lingueDiCuiHoBandiere.includes(details.original_language) ? '../../public/' + details.original_language + '.png' : details.original_language }}</div> -->
-            <!-- .original_language per SERIE  -->
 
             <span><strong>Lingua originale: </strong></span>
             <img class="bandiera"
@@ -66,7 +49,7 @@ export default {
 
 </template>
 
-<!-- STILE -->
+
 
 <style scoped lang="scss">
 .prod-card {
